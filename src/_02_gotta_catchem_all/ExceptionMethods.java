@@ -17,6 +17,7 @@ public class ExceptionMethods {
 		if (input.equals("")) {
 			throw new IllegalStateException();
 		}
+		System.out.println(output);
 		return output;
 	}
 }

@@ -50,9 +50,12 @@ class ExceptionsTest {
 	@Test
 	public void testReverseString() throws IllegalStateException {
 		try {
-			
+			assertEquals("ghi", em.reverseString("ihg"));
+			em.reverseString("");
+			fail("IllegalStateException not thrown");
 		}catch(IllegalStateException e) {
-			
+			e.printStackTrace();
+			assertEquals("ihg", em.reverseString("ghi"));
 		}
 	}
 	
