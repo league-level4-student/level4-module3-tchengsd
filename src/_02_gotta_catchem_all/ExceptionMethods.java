@@ -11,7 +11,7 @@ public class ExceptionMethods {
 	String reverseString(String input) throws IllegalStateException {
 		char[] array = input.toCharArray();
 		String output = "";
-		for (int i = array.length; i >= 0; i--) {
+		for (int i = array.length-1; i >= 0; i--) {
 			output = output + array[i];
 		}
 		if (input.equals("")) {
